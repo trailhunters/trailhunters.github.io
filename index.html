@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="th-icon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Αρχική - Trail Hunters</title>
+
+        <script src="script.js"></script>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="th-img"></div>
+
+            <div class="header_content">
+
+                <div id="navbar" class="navbar">
+                    <ul>
+
+                        <div class="container" onclick="mobileMenuToggle(this)">
+                            <div class="bar1 menu-toogle"></div>
+                            <div class="bar2 menu-toogle"></div>
+                            <div class="bar3 menu-toogle"></div>
+                          </div>
+                        
+                        <li class="white_underline arrow1"><a href="index.html">Αρχική</a></li>
+                        
+                        <div class="dropdown white_underline">
+                        <li class="none"><a id="Bike" class="light-fg dark-fg" href="javascript:void(0)">Bike news <span>&#9660;</span></a></li>
+                        <div style="margin-left: -12px;" class="dropdown-content">
+                            <a href="#">Enduro</a>
+                            <a href="#">Downhill</a>
+                            <a href="#">Hardtail</a>
+                        </div>
+                        </div>
+                        
+                        <div class="dropdown white_underline">
+                        <li class="none"><a href="javascript:void(0)">Team news <span>&#9660;</span></a></li>
+                        <div style="margin-left: -6px;" class="dropdown-content light dark">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                        </div>
+
+                        <div class="dropdown white_underline">
+                            <li class="none"><a href="javascript:void(0)">Social Media <span>&#9660;</span></a></li>
+                            <div class="dropdown-content light dark">
+                                <a href="#">Instagram</a>
+                                <a href="#">Facebook</a>
+                                <a href="#">Youtube</a>
+                            </div>
+                            </div>
+
+                            <!-- <div style="float: right;">
+                            <button onclick="lightMode()">light</button>
+                            </div>  -->
+                            
+                            <!-- new code -->
+                            <div class="switch-post">
+                            <label class="switch">
+                                <input id="Checkbox" type="checkbox" onclick="lightMode()">
+                                <span class="slider"></span>
+                              </label>
+                            </div>
+                              
+                            <!--  -->
+
+                    </ul>
+
+                </div>
+
+            </div>
+        
+        </header>
+
+        <div id="div1" class="test_post light-bg dark-bg">
+        </div>
+
+        <div id="1" style="display: none;" class="test_post"></div>
+
+        <div id="2" style="display: none;" class="test_post"></div>
+
+        <div id="3" style="display: none;" class="test_post"></div>
+
+
+
+<!-- 
+        <div style="display: none;" id="1" class="test_post light-bg dark-bg">
+        </div>
+        
+        <div style="display: none;" id="2" class="test_post light-bg dark-bg">
+        </div>
+        
+        <div style="display: none;" id="3" class="test_post light-bg dark-bg">
+        </div> -->
+
+
+    </body>
+
+
+</html>
