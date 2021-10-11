@@ -52,17 +52,16 @@ ul {
     padding-top: 6px;
     padding-bottom: 2px;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 25px;
 }
 
 li {
     display: inline;
     list-style-type: none;
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 10px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-    margin-left: -20px;
 }
 
 a:link {
@@ -99,7 +98,7 @@ a:link {
     display: none;
     position: absolute;
     background-color: #555;
-    min-width: 162px;
+    min-width: 163px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     margin-top: 8px;
