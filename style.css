@@ -10,11 +10,7 @@ body {
 }
 
 .none {
-  display: none;
-}
-
-.none-pc {
-  display: none;
+  display: block;
 }
 
 .light-body{
@@ -349,7 +345,7 @@ footer {
   /* Tablet */
   @media only screen and (max-width: 1024px) {
     .none {
-      display:inline-block;
+      display:none;
     }
 
     .test_post {
@@ -421,13 +417,6 @@ footer {
     margin-left: 15px;
     margin-right: 15px;
   }
-  .none {
-    display: none;
-  }
-
-  .none-pc {
-    display: block;
-  }
   /* 
 
 
@@ -497,9 +486,6 @@ footer {
       display: none;
     }
 
-    .none-pc {
-      display: block;
-    }
   }
 
 
@@ -529,9 +515,5 @@ footer {
 
       .none {
         display: none;
-      }
-
-      .none-pc {
-        display: block;
       }
     }
