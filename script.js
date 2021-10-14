@@ -1,13 +1,19 @@
 // navbar from relative to fixed
-window.onscroll = function() {navbarOnTop(), get()};
+window.onscroll = function(){navbarOnTop(), get()}
 
 function navbarOnTop() {
     var navBar = document.getElementById("navbar");
-    if (document.documentElement.scrollTop > 379) {
+    var mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.style.marginTop = "0px"
+    if (document.documentElement.scrollTop >= 381) {
         navBar.style.position = "fixed";
-        navBar.style.top = "0";} 
-    else if (document.documentElement.scrollTop <= 379){
+        navBar.style.top = "0";
+        mobileMenu.style.position = "fixed";
+        mobileMenu.style.top = "0";
+        mobileMenu.style.marginTop = "45px"} 
+    else {
         navBar.style.position = "relative";
+        mobileMenu.style.position = "relative";
     }
 }
 
@@ -19,31 +25,42 @@ function get() {
     num+=1 
     var content = document.getElementById(num);
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        content.style.display = 'block' 
+        content.style.display = 'block';
     }
     }
 }
 
-// Mobile Menu Toggle
+// Mobile Menu Button
 function mobileMenuToggle(x) {
     x.classList.toggle("change");
   }
 // ---
 
 
-// Dark Mode
+// Light Mode
 function lightMode() {
 var element = document.body; // body
-x = element.classList.toggle("light-mode")
-localStorage.setItem("x", x)
+x = element.classList.toggle("light-body");
+localStorage.setItem("light-body", x);
 }
 
 window.onload = function() {
-    if (localStorage.getItem("x") == "true") {
+    if (localStorage.getItem("light-body") == "true") {
         lightMode()
         document.getElementById("Checkbox").checked = true
     } 
 }
+// ---
 
-window.onclick = function(){ 
-console.log(localStorage.getItem("x"))}
+
+
+// Mobile Menu Toggle
+function menuOpenToggle() {
+var mobileMenu = document.getElementById("mobile-menu")
+if (mobileMenu.style.width == "280px") {
+    mobileMenu.style.width = "0px";
+}
+else {
+    mobileMenu.style.width = "280px";
+    }
+}
