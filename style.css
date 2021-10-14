@@ -9,28 +9,28 @@ body {
     transition: background 1s;
 }
 
-.light-mode{
+.none {
+  display: none;
+}
+
+.none-pc {
+  display: none;
+}
+
+.light-body{
   background-color: #dddddd;
   color: black;
 }
 
 /* NAVBAR */
 header {
-    height: 426px;
-    margin-bottom: 50px;
-}
-
-.header_content{
-    margin: 0;
-    position: relative;
-    width: 100%;
-    z-index: 99;
+  height: 425px;
+  margin-bottom: 30px;
 }
 
 .th-img {
     background-image: url("FOREST-LOGO.png");
     position:relative;
-    z-index: 99;
     min-height: 380px;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,18 +41,18 @@ header {
     position:relative;
     width: 100%;
     height: 45px;
-    z-index: 99;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     background-color: #555;
+    z-index: 99;
 }
 
 ul {
     margin: 0;
     text-align: center;
     padding-top: 6px;
-    padding-bottom: 2px;
+    padding-bottom: 6px;
     padding-left: 5px;
-    padding-right: 25px;
+    padding-right: 40px;
 }
 
 li {
@@ -141,23 +141,17 @@ a:link {
 
 
   .test_post {
-    margin-bottom: 50px;
+    margin: 0;
+    position: relative;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    position:relative;
     width: 800px;
-    height: 900px;
+    height: 1200px;
     background-color: #555;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    z-index: -1;
   }
-
-
-/* new code */
-/* .switch-post {
-  position: absolute;
-  margin-right: 5px;
-  margin-top: -40px;
-} */
 
 .switch {
   position: absolute;
@@ -355,7 +349,7 @@ footer {
   /* Tablet */
   @media only screen and (max-width: 1024px) {
     .none {
-      display: none;
+      display:inline-block;
     }
 
     .test_post {
@@ -367,12 +361,17 @@ footer {
       height: 600px;
       background-color: #555;
       box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+      z-index: -1;
     }
 
     .container {
       float: left;
       cursor: pointer;
       margin-top: -4px;
+    }
+
+    .container:hover {
+      color: #D5CA9D;
     }
     
     .bar1, .bar2, .bar3 {
@@ -382,7 +381,7 @@ footer {
       margin: 6px 0;
       transition: 0.4s;
     }
-    
+
     .change .bar1 {
       -webkit-transform: rotate(-45deg) translate(-9px, 6px);
       transform: rotate(-45deg) translate(-9px, 6px);
@@ -394,8 +393,42 @@ footer {
       -webkit-transform: rotate(45deg) translate(-8px, -8px);
       transform: rotate(45deg) translate(-8px, -8px);
     }
-  /*  */
   }
+
+  #mobile-menu {
+    overflow: hidden;
+    width: 0px;
+    height: 1365px;
+    background-color: #555;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: 0.5s;
+  } 
+
+  #mobile-menu #myLinks {
+    margin-top: 30px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 250px;
+  }
+
+  #mobile-menu a {
+    margin: 0;
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .none {
+    display: none;
+  }
+
+  .none-pc {
+    display: block;
+  }
+  /* 
 
 
 
@@ -453,46 +486,52 @@ footer {
 
 
   /* Phone */
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 767px) {
+
+    .test_post {
+      width: 340px;
+      margin-top: 30px;
+    }
+
     .none {
       display: none;
     }
 
-    .test_post {
-      margin-bottom: 40px;
-      margin-left: auto;
-      margin-right: auto;
-      position:relative;
-      width: 340px;
-      height: 600px;
-      background-color: #555;
-      box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    .none-pc {
+      display: block;
     }
-
-    .container {
-      float: left;
-      cursor: pointer;
-      margin-top: -4px;
-    }
-    
-    .bar1, .bar2, .bar3 {
-      width: 35px;
-      height: 5px;
-      background-color: white;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-    
-    .change .bar1 {
-      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-      transform: rotate(-45deg) translate(-9px, 6px);
-    }
-    
-    .change .bar2 {opacity: 0;}
-    
-    .change .bar3 {
-      -webkit-transform: rotate(45deg) translate(-8px, -8px);
-      transform: rotate(45deg) translate(-8px, -8px);
-    }
-  /*  */
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Galaxy Fold */
+    @media only screen and (max-width: 280px) {
+      .test_post {
+        margin-top: 30px;
+        width: 265px;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .none-pc {
+        display: block;
+      }
+    }
